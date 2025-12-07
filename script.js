@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
      @param {string|null} taskTextParam 
 
     function addTask(taskTextParam = null) {
-        const rawText = taskTextParam !== null ? taskTextParam : taskInput.value;
+        const rawText = taskTextParam !== null ? taskTextParam : taskInput.value.trim();
         const taskText = String(rawText).trim();
 
         if (taskText === "") {
